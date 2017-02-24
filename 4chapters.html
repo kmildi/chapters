@@ -215,10 +215,6 @@
     	return url.slice(0, url.lastIndexOf('#'));
     }
 
-    function isCssSmoothSCrollSupported() {
-    	return 'scrollBehavior' in document.documentElement.style;
-    }
-
     function setFocus(hash) {
     	var element = document.getElementById(hash.substring(1));
 	if (element) {
