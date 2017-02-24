@@ -102,40 +102,8 @@
 
   </style>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
- 	offset = 0;
-    	$('#cimsor li a[href^="#"]').click(function(event) {
-           event.preventDefault();
-           $('#cimsor li a[href^="#"]').removeClass("active")
-           $(this).addClass('active');                
-           var anchorId = $(this).attr('href');	        
-           var target = $(anchorId).offset().top - offset;
-           console.log(target);
-           $('html, body').stop().animate({ scrollTop: target }, 500, function () {
-               window.location.hash = anchorId;
-           });
-           return false;
-        });
-          
-        $(window).scroll(function(){               
-           position = $(this).scrollTop();
-           $('#cimsor li a[href^="#"]').each(function(){
-              var anchorId = $(this).attr('href'); 
-              var target = $(anchorId).offset().top - 300;                   
-              console.log(position,target);
-              if(position>=target){                 
-                 $('#cimsor li a[href^="#"]').removeClass("active")
-                 $(this).addClass('active'); 
-              }
-           })
-        })
-        $(function(){              
-           $(window).scroll();
-        })
-    });
-  </script>
+ 
+  
 
 <body>
   <div>    
