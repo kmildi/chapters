@@ -233,7 +233,7 @@
     var sections = {};
     var i = 0;
     Array.prototype.forEach.call(section, function(e) {
-      sections[e.id] = e.offsetTop;
+      sections[e.id] = e.offsetTop-250;
     });
     window.onscroll = function() {
       var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
